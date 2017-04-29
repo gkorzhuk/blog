@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Italy 2017</title>
+    <meta name="description" content="">
+    <meta name="author" content="Grigoriy Korzhuk">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../static/classic/galleria.classic.css">
+    <link rel="stylesheet" href="../static/css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Molengo">
+    <style>
+      body { font: 16px/1.5 Molengo, sans-serif; }
+      h1, h2, h3, h4, h5, h6 { font-family: "PT Sans", sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><a href="../">Photos</a></h1>
+
+
+        <h2><a href=".">Italy 2017</a></h2>
+        <hr>
+      </header>
+
+      <div id="main" role="main">
+
+        <div class="icons">
+          <a id="fullscreen"><img src="../static/img/fullscreen.png"
+            title="Fullscreen" alt="Fullscreen" /></a>
+        </div>
+        <div id="gallery">
+              <a href="55590011.png">
+                <img src="thumbnails/55590011.png" alt="55590011.png"
+                    data-title="55590011.png"
+                    data-description=""
+ />
+              </a>
+        </div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Grigoriy Korzhuk           </br>
+          Back to <a href="http://blog.geeque.ru/">Blog</a></p>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/galleria-1.4.2.min.js"></script>
+    <script src="../static/js/galleria.classic.min.js"></script>
+    <script src="../static/js/galleria.history.min.js"></script>
+    <script>
+
+    Galleria.configure({
+        imageCrop: false,
+        transition: "fade"
+    });
+    Galleria.run("#gallery");
+
+
+    Galleria.ready(function() {
+        this.attachKeyboard({
+            right: this.next,
+            left: this.prev,
+            /* Toggle fullscreen display on press of 'f' key */
+            0x46: this.toggleFullscreen,
+        });
+
+        var gallery = this;
+        $('#fullscreen').click(function() {
+          gallery.toggleFullscreen();
+        });
+
+        $('.icons').appendTo(this.$('container'));
+
+     });
+
+    </script>
+  </body>
+</html>
